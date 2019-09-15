@@ -73,6 +73,8 @@ static const char *raisevolcmd[]  = { "volume", "raise", NULL };
 static const char *lowervolcmd[]  = { "volume", "lower", NULL };
 static const char *mutevolcmd[]  = { "volume", "mute", NULL };
 static const char *maxvolcmd[]  = { "volume", "max", NULL };
+static const char *launchtelegramcmd[]  = { "launchtelegram", NULL };
+static const char *htopcmd[]  = { "st", "-e", "htop", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -102,11 +104,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = vifmcmd } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = launchtelegramcmd } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,             XK_h,      spawn,          {.v = htopcmd } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
