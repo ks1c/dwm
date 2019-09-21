@@ -75,6 +75,7 @@ static const char *mutevolcmd[]  = { "volume", "mute", NULL };
 static const char *maxvolcmd[]  = { "volume", "max", NULL };
 static const char *launchtelegramcmd[]  = { "launchtelegram", NULL };
 static const char *htopcmd[]  = { "st", "-e", "htop", NULL };
+static const char *refreshbarcmd[]  = { "dwmbar", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -117,6 +118,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = refreshbarcmd } },
 
 	// Number key bindings
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
