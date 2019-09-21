@@ -118,7 +118,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = refreshbarcmd } },
+	{ MODKEY,	                XK_b,      spawn,          {.v = refreshbarcmd } },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 
 	// Number key bindings
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
