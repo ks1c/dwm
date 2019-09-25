@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 
 	// GRUVBOX
 	[SchemeNorm] = { "#928374", "#282828", "#282828" },
-	[SchemeSel]  = { "#ebdbb2", "#282828", "#928374" },//#ebdbb2
+	[SchemeSel]  = { "#ebdbb2", "#3c3836", "#928374" },
 };
 
 /* tagging */
