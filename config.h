@@ -24,6 +24,7 @@ static const char sbo[]             = "#bdae93";
 static const char *colors[][3]      = {
 	[SchemeNorm] = { nfg, nbg, nbo },
 	[SchemeSel]  = { sfg, sbg, sbo },
+	[SchemeCustom]  = { "#fb4934", "#928374", sbo },
 };
 
 /* tagging */
