@@ -13,30 +13,17 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12" };
 static const char dmenufont[]       = "monospace:size=12";
 
-/* DEFAULT COLORS */
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-
-/* GRUVBOX COLORS */
-static const char col_gruvb8[]      = "#928374";
-static const char col_gruvb0[]      = "#282828";
-static const char col_gruvb11[]     = "#fabd2f";
-static const char col_gruvb15[]     = "#ebdbb2";
-static const char col_gruvb237[]    = "#3c3836";
-
-
+/* COLORS */
+static const char nbg[]             = "#1d2021";
+static const char nfg[]             = "#bdae92";
+static const char nbo[]             = "#fabd2f";
+static const char sbg[]             = "#32302f";
+static const char sfg[]             = "#bdae92";
+static const char sbo[]             = "#bdae93";
 
 static const char *colors[][3]      = {
-	/*               fg           bg         border   */
-	//[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-
-	// GRUVBOX
-	[SchemeNorm] = { col_gruvb8, col_gruvb0, col_gruvb0 },
-	[SchemeSel]  = { col_gruvb15, col_gruvb237, col_gruvb8 },
+	[SchemeNorm] = { nfg, nbg, nbo },
+	[SchemeSel]  = { sfg, sbg, sbo },
 };
 
 /* tagging */
@@ -79,7 +66,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gruvb0, "-nf", col_gruvb8, "-sb", col_gruvb237, "-sf", col_gruvb11, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", nbg, "-nf", nfg, "-sb", sbg, "-sf", sfg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 static const char *ssselectioncmd[]  = { "screenshot", "selection", NULL };
