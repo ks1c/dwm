@@ -16,7 +16,7 @@ static const char dmenufont[]       = "monospace:size=12";
 /* COLORS */
 static const char nbg[]             = "#1d2021";
 static const char nfg[]             = "#bdae92";
-static const char nbo[]             = "#fabd2f";
+static const char nbo[]             = "#1d2021";
 static const char sbg[]             = "#32302f";
 static const char sfg[]             = "#bdae92";
 static const char sbo[]             = "#bdae93";
