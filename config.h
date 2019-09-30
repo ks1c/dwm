@@ -73,6 +73,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", nbg, "-nf", nfg, "-sb", sbg, "-sf", sfg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
+static const char *ssselecteditcmd[]  = { "screenshot", "selection-edit", NULL };
 static const char *ssselectioncmd[]  = { "screenshot", "selection", NULL };
 static const char *ssfullscreencmd[]  = { "screenshot", "fullscreen", NULL };
 static const char *powermenucmd[]  = { "powermenu", NULL };
@@ -96,7 +97,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = ssselectioncmd } },
-	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = ssfullscreencmd } },
+	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = ssselecteditcmd } },
+	{ 0,                            XK_Print,  spawn,          {.v = ssfullscreencmd } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
