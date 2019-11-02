@@ -43,7 +43,7 @@ static const Rule rules[] = {
 	{ "Gimp",            NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",         NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Thunderbird",     NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "gdx-game",        NULL,       NULL,       0,            1,           -1 },
+	{ "gdx2d",           NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
