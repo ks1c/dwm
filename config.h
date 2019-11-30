@@ -43,7 +43,7 @@ static const Rule rules[] = {
 	{ "Gimp",             NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",          NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Thunderbird",      NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Steam",            NULL,       NULL,       1 << 6,       0,           -1 },
+	{ "Steam",            NULL,       "Steam",    1 << 6,       0,           -1 },
 	{ "jetbrains-studio", NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "Gdx2D",            NULL,       NULL,       0,            1,           -1 },
 };
