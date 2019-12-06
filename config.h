@@ -13,7 +13,20 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12" };
 static const char dmenufont[]       = "monospace:size=12";
 
-/* COLORS */
+/* DRACULA COLORS */
+static const char nbg[]             = "#21222c";
+static const char nfg[]             = "#f8f8f2";
+static const char nbo[]             = "#21222c";
+static const char sbg[]             = "#bd93f9";
+static const char sfg[]             = "#21222c";
+static const char sbo[]             = "#bd93f9";
+
+static const char *colors[][3]      = {
+	[SchemeNorm] = { nfg, nbg, nbo },
+	[SchemeSel]  = { sfg, sbg, sbo },
+};
+
+/* GRUVBOX COLORS
 static const char nbg[]             = "#1d2021";
 static const char nfg[]             = "#bdae92";
 static const char nbo[]             = "#1d2021";
@@ -24,13 +37,13 @@ static const char sbo[]             = "#bdae93";
 static const char *colors[][3]      = {
 	[SchemeNorm] = { nfg, nbg, nbo },
 	[SchemeSel]  = { sfg, sbg, sbo },
-};
+}; */
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 /* draw tag line */
-static const int drwtagline = 1;
+static const int drwtagline = 0;
 static const int lnthic     = 2;
 
 static const Rule rules[] = {
