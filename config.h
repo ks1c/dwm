@@ -100,6 +100,7 @@ static const char *mutevolcmd[]  = { "volume", "mute", NULL };
 static const char *maxvolcmd[]  = { "volume", "max", NULL };
 static const char *launchtelegramcmd[]  = { "launchtelegram", NULL };
 static const char *htopcmd[]  = { "st", "-e", "htop", NULL };
+static const char *joplincmd[]  = { "st", "-e", "joplin", NULL };
 static const char *refreshbarcmd[]  = { "dwmbar", NULL };
 
 static Key keys[] = {
@@ -140,6 +141,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,      spawn,          {.v = htopcmd } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_j,      spawn,          {.v = joplincmd } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
